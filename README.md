@@ -1,2 +1,1 @@
-# ssh-client
-Tiny ssh client
+# Tiny SSH client (openssh-client)
