@@ -35,3 +35,7 @@ docker run -it --rm quay.io/abousselmi/ssh-client-alpine sh
 # Minideb
 docker run -it --rm quay.io/abousselmi/ssh-client-minideb sh
 ```
+
+## Credits
+
+This repo is inspired by [kroniak](https://github.com/kroniak/alpine-ssh-client)
