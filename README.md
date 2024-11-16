@@ -26,7 +26,7 @@ ssh-to-server:
     - ssh "${TARGET_USER}"@"${TARGET_IP}" echo "Hello World !"
 ```
 
-## Run locally
+## Run it
 
 ```console
 # Alpine
