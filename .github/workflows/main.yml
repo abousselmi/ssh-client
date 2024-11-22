@@ -13,9 +13,9 @@ jobs:
       matrix:
         include:
           - dockerfile: ./alpine-latest/Dockerfile
-            image: ghcr.io/abousselmi/alpine-ssh-client
+            image: ghcr.io/${{ github.actor }}/alpine-ssh-client
           - dockerfile: ./minideb-latest/Dockerfile
-            image: ghcr.io/abousselmi/debian-ssh-client
+            image: ghcr.io/${{ github.actor }}/debian-ssh-client
     permissions:
       contents: read
       packages: write
@@ -37,4 +37,4 @@ jobs:
           context: .
           push: true
           file: ${{ matrix.dockerfile }}
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: latest
