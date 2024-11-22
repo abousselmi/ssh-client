@@ -37,4 +37,4 @@ jobs:
           context: .
           push: true
           file: ${{ matrix.dockerfile }}
-          tags: latest
+          tags: ${{ matrix.image }}:latest
