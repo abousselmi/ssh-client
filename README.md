@@ -1,12 +1,18 @@
-# Tiny SSH client (openssh-client)
+# Tiny SSH client (openssh-client + expect)
+
+![ci status](https://github.com/abousselmi/ssh-client/actions/workflows/main.yml/badge.svg)
 
 ## Alpine image
 
-[![Docker Repository on Quay](https://quay.io/repository/abousselmi/ssh-client-alpine/status "Docker Repository on Quay")](https://quay.io/repository/abousselmi/ssh-client-alpine)
+```console
+docker run -it --rm quay.io/abousselmi/alpine-ssh-client sh
+```
 
 ## Bitnami Minideb image
 
-[![Docker Repository on Quay](https://quay.io/repository/abousselmi/ssh-client-minideb/status "Docker Repository on Quay")](https://quay.io/repository/abousselmi/ssh-client-minideb)
+```console
+docker run -it --rm quay.io/abousselmi/minideb-ssh-client sh
+```
 
 ## Gitlab-CI sample
 
@@ -14,7 +20,7 @@
 ssh-to-server:
   stage: ssh
   image:
-    quay.io/abousselmi/ssh-client-alpine
+    quay.io/abousselmi/alpine-ssh-client
   before_script:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
@@ -24,16 +30,6 @@ ssh-to-server:
     - chmod 600 ~/.ssh/id_rsa
   script:
     - ssh "${TARGET_USER}"@"${TARGET_IP}" echo "Hello World !"
-```
-
-## Run it
-
-```console
-# Alpine
-docker run -it --rm quay.io/abousselmi/ssh-client-alpine sh
-
-# Minideb
-docker run -it --rm quay.io/abousselmi/ssh-client-minideb sh
 ```
 
 ## Credits
