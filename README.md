@@ -20,7 +20,7 @@ docker run -it --rm quay.io/abousselmi/minideb-ssh-client sh
 ssh-to-server:
   stage: ssh
   image:
-    quay.io/abousselmi/alpine-ssh-client
+    ghcr.io/abousselmi/alpine-ssh-client:latest
   before_script:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
