@@ -5,13 +5,13 @@
 ## Alpine image
 
 ```console
-docker run -it --rm quay.io/abousselmi/alpine-ssh-client sh
+docker run -it --rm ghcr.io/abousselmi/alpine-ssh-client sh
 ```
 
 ## Bitnami Minideb image
 
 ```console
-docker run -it --rm quay.io/abousselmi/minideb-ssh-client sh
+docker run -it --rm ghcr.io/abousselmi/minideb-ssh-client sh
 ```
 
 ## Gitlab-CI sample
